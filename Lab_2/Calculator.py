@@ -15,7 +15,8 @@ def divide(m, n)
     negativeResult = m > 0 and n < 0 or m < 0 and n > 0
     n = abs(n)
     m = abs(m)
-
+if n == 0:
+    raise ZeroDivisionError('You cannot divide by 0!')
     while (m - n >= 0):
         m -= n
         result += 1
